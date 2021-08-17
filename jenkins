@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('compile') {
+            steps {
+                echo 'compiling.. This is the compile phase'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing.. This is the testing phase'
+            }
+        }
+        stage('package') {
+            steps {
+                echo 'packaging....  This is the packaging phase'
+            }
+        }
+	stage('Deploy') {
+		steps {
+			echo 'deploy phase....'
+		}
+	}
+    }
+}
